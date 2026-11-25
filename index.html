@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="da">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101d32">
+  <meta name="description" content="EventRent A/S – lej lyd, lys, telte og udstyr til din næste begivenhed.">
+  <title>EventRent A/S | Udlejning til dit event</title>
+  <style>
+    :root {--navy:#101d32;--navy2:#182a44;--blue:#2563eb;--sky:#eff6ff;--ink:#1d2939;--muted:#667085;--line:#e5eaf1;--white:#fff;--bg:#f7f9fc;--green:#087e58;--shadow:0 13px 32px rgba(18,35,62,.09)}
+    * {box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg)} button,input,select{font:inherit} button{cursor:pointer} a{color:inherit;text-decoration:none} .container{width:min(1160px,calc(100% - 40px));margin:auto}
+    header{background:var(--navy);color:white;position:sticky;top:0;z-index:10;box-shadow:0 5px 20px rgba(0,0,0,.13)} .nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px} .logo{display:flex;align-items:center;gap:11px;font-weight:850;letter-spacing:-.5px;font-size:23px}.logo-mark{display:grid;place-items:center;background:var(--blue);height:40px;width:40px;border-radius:12px;font-size:23px}.logo small{display:block;color:#9ab0cc;font-size:10px;font-weight:700;letter-spacing:2px;line-height:1.1}.nav-links{display:flex;gap:28px;align-items:center;color:#cbd7e8;font-size:14px;font-weight:650}.nav-links a:hover{color:white}.nav-action{border:1px solid #6b82a2;background:transparent;color:white;border-radius:10px;padding:10px 15px;font-weight:700}.nav-action:hover{background:#253a58}
+    .hero{background:linear-gradient(125deg,#101d32 5%,#193858 55%,#24577a);color:white;padding:78px 0 84px;overflow:hidden;position:relative}.hero:before,.hero:after{content:"";position:absolute;border:1px solid rgba(255,255,255,.09);border-radius:50%;width:560px;height:560px;right:-160px;top:-280px}.hero:after{width:360px;height:360px;right:90px;top:65px}.hero-content{position:relative;z-index:1;max-width:750px}.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:800;letter-spacing:1.7px;text-transform:uppercase;color:#a8d8ff;margin-bottom:16px}.dot{width:8px;height:8px;background:#54d4ac;border-radius:50%}h1{font-size:clamp(35px,5vw,62px);line-height:1.08;letter-spacing:-1.9px;margin:0 0 22px} .hero p{font-size:19px;line-height:1.7;color:#d7e6f5;max-width:630px;margin:0 0 31px}.hero-actions{display:flex;gap:12px;flex-wrap:wrap}.primary,.secondary{display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:11px;padding:13px 20px;font-weight:750;transition:.18s}.primary{background:var(--blue);color:white}.primary:hover{background:#1d4ed8}.secondary{border:1px solid rgba(255,255,255,.43);color:white;background:transparent}.secondary:hover{background:#ffffff18}.hero-note{color:#c5d4e5;font-size:12px;margin-top:27px}
+    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:-28px;position:relative;z-index:2}.feature{background:white;border:1px solid var(--line);border-radius:15px;padding:21px 22px;box-shadow:var(--shadow);display:flex;align-items:flex-start;gap:13px}.feature-icon{background:var(--sky);border-radius:10px;padding:10px;font-size:22px}.feature strong{display:block;font-size:14px;margin-bottom:3px}.feature p{font-size:13px;margin:0;color:var(--muted)}
+    section{padding:74px 0}.section-top{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:25px}.section-kicker{color:var(--blue);text-transform:uppercase;letter-spacing:1.3px;font-size:12px;font-weight:850}.section-top h2,.about h2{font-size:clamp(27px,3.5vw,36px);letter-spacing:-.9px;margin:7px 0}.section-top p{margin:0;color:var(--muted);max-width:560px}.filters{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:24px}.filter{border:1px solid #d7dfea;color:#46556a;background:white;border-radius:30px;padding:9px 17px;font-size:13px;font-weight:700}.filter:hover,.filter[aria-pressed="true"]{background:var(--navy);color:white;border-color:var(--navy)}.products{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.product{background:white;border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 5px 17px rgba(18,35,62,.035);display:flex;flex-direction:column}.product-image{background:linear-gradient(145deg,#eaf1fb,#dbe8f7);display:grid;place-items:center;height:175px;position:relative}.product-icon{font-size:70px;filter:drop-shadow(0 7px 8px rgba(28,45,65,.12))}.tag{position:absolute;top:15px;left:15px;color:#174d8f;background:white;border-radius:25px;padding:4px 10px;font-weight:800;font-size:11px}.product-body{padding:22px;display:flex;flex-direction:column;flex:1}.category{font-size:11px;font-weight:850;color:var(--blue);text-transform:uppercase;letter-spacing:1px}.product h3{font-size:19px;margin:7px 0 8px;letter-spacing:-.3px}.product p{margin:0 0 21px;color:var(--muted);font-size:14px;flex:1}.product-bottom{display:flex;align-items:center;justify-content:space-between;gap:12px;border-top:1px solid var(--line);padding-top:16px}.price strong{font-size:23px;letter-spacing:-.5px}.price small{color:var(--muted);font-size:12px}.add{border:0;background:var(--sky);color:#1d52a9;border-radius:10px;padding:10px 13px;font-weight:800;font-size:12px}.add:hover{background:#dbeafe}
+    .booking-wrap{background:#eef3f9}.booking-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}.booking-desc p{color:var(--muted);max-width:500px}.steps{display:grid;gap:19px;margin-top:29px}.step{display:flex;align-items:center;gap:13px;font-size:14px}.step-number{background:white;border:1px solid #cfdeef;border-radius:11px;width:34px;height:34px;display:grid;place-items:center;color:var(--blue);font-weight:850;flex-shrink:0}.booking-card{border-radius:18px;padding:26px;background:white;border:1px solid var(--line);box-shadow:var(--shadow)}.booking-card h3{margin:0 0 5px;font-size:22px}.booking-card .hint{color:var(--muted);font-size:13px;margin:0 0 19px}.selected-list{display:grid;gap:9px;min-height:44px;margin:0 0 19px}.selected-item{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:11px 12px;background:var(--bg);border:1px solid var(--line);border-radius:10px;font-size:13px}.selected-item button{color:#b42318;background:transparent;border:0;font-size:18px;line-height:1;padding:2px 6px}.empty{color:var(--muted);background:var(--bg);border:1px dashed #c4cfde;border-radius:11px;padding:16px;font-size:13px}.fieldrow{display:grid;grid-template-columns:1fr 1fr;gap:12px}.field label{font-size:12px;font-weight:800;display:block;margin-bottom:7px}.field input{width:100%;padding:11px;border:1px solid #cad4e2;border-radius:9px;color:var(--ink);background:white}.field input:focus{outline:2px solid #b5d3ff;border-color:var(--blue)}.total{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line);margin-top:21px;padding-top:17px;gap:10px}.total span{color:var(--muted);font-size:14px}.total strong{font-size:27px;letter-spacing:-.7px}.full{width:100%;margin-top:17px}.notice{font-size:12px;color:var(--muted);margin:13px 0 0}.status{font-size:13px;margin-top:12px;border-radius:9px;padding:10px 12px;display:none}.status.show{display:block}.status.error{background:#fff1f0;color:#b42318}.status.success{background:#ecfdf3;color:var(--green)}
+    .about{background:#fff}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}.about p{color:var(--muted)}.about-panel{border-radius:20px;padding:34px;background:linear-gradient(135deg,#142640,#245b81);color:white}.about-panel h3{font-size:25px;margin:0 0 14px}.about-panel p{color:#d7e7f4;margin:0}.tech-pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:23px}.tech-pills span{border:1px solid #ffffff4d;background:#ffffff17;padding:7px 10px;border-radius:25px;font-size:12px;font-weight:750}
+    footer{background:var(--navy);color:#d2deed;padding:30px 0}.footer-inner{display:flex;justify-content:space-between;gap:18px;align-items:center;font-size:13px}.footer-inner strong{color:white}.footer-inner small{color:#9fb2ca}.footer-inner a{text-decoration:underline;text-underline-offset:3px} [hidden]{display:none!important}
+    @media(max-width:900px){.products{grid-template-columns:repeat(2,1fr)}.features{grid-template-columns:1fr}.booking-grid{grid-template-columns:1fr}.about-grid{grid-template-columns:1fr;gap:25px}}
+    @media(max-width:580px){.container{width:min(100% - 28px,1160px)}.nav{min-height:68px}.logo{font-size:19px}.logo-mark{width:36px;height:36px}.nav-links{display:none}.hero{padding:58px 0 76px}.hero p{font-size:16px}.products{grid-template-columns:1fr}.section-top{display:block}.features{margin-top:-20px}.fieldrow{grid-template-columns:1fr}.footer-inner{flex-direction:column;align-items:flex-start}.booking-card{padding:20px}section{padding:55px 0}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a href="#top" class="logo" aria-label="EventRent A/S forside"><span class="logo-mark">✦</span><span>EventRent <small>EVENTUDLEJNING</small></span></a>
+    <nav class="nav-links" aria-label="Hovedmenu"><a href="#udstyr">Vores udstyr</a><a href="#booking">Prisberegner</a><a href="#om-os">Om EventRent</a></nav>
+    <a class="nav-action" href="#booking">Planlæg din leje →</a>
+  </div>
+</header>
+<main id="top">
+  <div class="hero">
+    <div class="container hero-content">
+      <div class="eyebrow"><span class="dot"></span> UDSTYR TIL STORE ØJEBLIKKE</div>
+      <h1>Vi leverer rammerne.<br>Du skaber minderne.</h1>
+      <p>Lej professionelt lyd-, lys- og eventudstyr til festen, firmaarrangementet eller den helt store begivenhed. Nemt at vælge. Nemt at planlægge.</p>
+      <div class="hero-actions"><a class="primary" href="#udstyr">Se vores udstyr →</a><a class="secondary" href="#booking">Beregn din pris</a></div>
+      <div class="hero-note">EventRent A/S · Demonstrationshjemmeside til Cloud Computing-projekt</div>
+    </div>
+  </div>
+  <div class="container features" aria-label="Fordele">
+    <div class="feature"><div class="feature-icon">🎛️</div><div><strong>Udstyr til alle events</strong><p>Fra mindre fester til større arrangementer.</p></div></div>
+    <div class="feature"><div class="feature-icon">📅</div><div><strong>Overskuelig planlægning</strong><p>Vælg udstyr og lejeperiode på få minutter.</p></div></div>
+    <div class="feature"><div class="feature-icon">🔒</div><div><strong>Fokus på sikker drift</strong><p>Udviklet som en del af et cloud- og Docker-projekt.</p></div></div>
+  </div>
+  <section id="udstyr">
+    <div class="container">
+      <div class="section-top"><div><span class="section-kicker">Vores sortiment</span><h2>Find udstyret til dit event</h2><p>Vælg en kategori, og tilføj det ønskede udstyr til din prisberegning.</p></div></div>
+      <div class="filters" role="group" aria-label="Filtrér efter kategori">
+        <button class="filter" data-filter="alle" aria-pressed="true">Alle produkter</button>
+        <button class="filter" data-filter="lyd" aria-pressed="false">Lyd</button>
+        <button class="filter" data-filter="lys" aria-pressed="false">Lys</button>
+        <button class="filter" data-filter="telt" aria-pressed="false">Telte & møbler</button>
+      </div>
+      <div class="products" id="products">
+        <article class="product" data-category="lyd"><div class="product-image"><span class="tag">Populær</span><span class="product-icon" aria-hidden="true">🔊</span></div><div class="product-body"><span class="category">LYD</span><h3>PA-højttalersæt</h3><p>To højttalere med stativer – perfekt til musik og taler.</p><div class="product-bottom"><div class="price"><strong>499 kr.</strong><small> / dag</small></div><button class="add" data-id="pa">+ Tilføj</button></div></div></article>
+        <article class="product" data-category="lyd"><div class="product-image"><span class="product-icon" aria-hidden="true">🎤</span></div><div class="product-body"><span class="category">LYD</span><h3>Trådløs mikrofon</h3><p>Fleksibel mikrofon til præsentationer og optrædener.</p><div class="product-bottom"><div class="price"><strong>149 kr.</strong><small> / dag</small></div><button class="add" data-id="mic">+ Tilføj</button></div></div></article>
+        <article class="product" data-category="lys"><div class="product-image"><span class="tag">Stemning</span><span class="product-icon" aria-hidden="true">💡</span></div><div class="product-body"><span class="category">LYS</span><h3>LED-lyspakke</h3><p>Farverige LED-effekter, der løfter dansegulvet.</p><div class="product-bottom"><div class="price"><strong>299 kr.</strong><small> / dag</small></div><button class="add" data-id="led">+ Tilføj</button></div></div></article>
+        <article class="product" data-category="lys"><div class="product-image"><span class="product-icon" aria-hidden="true">✨</span></div><div class="product-body"><span class="category">LYS</span><h3>Effektlyssæt</h3><p>Dynamiske lyseffekter til scene og festområde.</p><div class="product-bottom"><div class="price"><strong>399 kr.</strong><small> / dag</small></div><button class="add" data-id="effect">+ Tilføj</button></div></div></article>
+        <article class="product" data-category="telt"><div class="product-image"><span class="tag">Udendørs</span><span class="product-icon" aria-hidden="true">⛺</span></div><div class="product-body"><span class="category">TELTE & MØBLER</span><h3>Festtelt 6 × 9 m</h3><p>Skab plads og læ for gæsterne ved udendørs events.</p><div class="product-bottom"><div class="price"><strong>1.299 kr.</strong><small> / dag</small></div><button class="add" data-id="tent">+ Tilføj</button></div></div></article>
+        <article class="product" data-category="telt"><div class="product-image"><span class="product-icon" aria-hidden="true">🪑</span></div><div class="product-body"><span class="category">TELTE & MØBLER</span><h3>Bord- og stolesæt</h3><p>Et sæt med bord og stole til seks personer.</p><div class="product-bottom"><div class="price"><strong>179 kr.</strong><small> / dag</small></div><button class="add" data-id="tables">+ Tilføj</button></div></div></article>
+      </div>
+    </div>
+  </section>
+  <section id="booking" class="booking-wrap">
+    <div class="container booking-grid">
+      <div class="booking-desc"><span class="section-kicker">Planlæg dit arrangement</span><h2 style="font-size:clamp(27px,3.5vw,36px);letter-spacing:-.9px;margin:7px 0">Beregn din lejepris</h2><p>Prøv vores enkle prisberegner. Vælg produkter ovenfor, angiv din lejeperiode og se en samlet pris.</p><div class="steps"><div class="step"><span class="step-number">1</span><span>Vælg det udstyr, du skal bruge</span></div><div class="step"><span class="step-number">2</span><span>Angiv start- og slutdato</span></div><div class="step"><span class="step-number">3</span><span>Se din beregnede pris med det samme</span></div></div><p style="font-size:13px;margin-top:30px"><strong>Bemærk:</strong> Dette er en prototype. Der foretages ingen reel reservation, betaling eller lagring af personoplysninger.</p></div>
+      <div class="booking-card"><h3>Din prisberegning</h3><p class="hint">Priserne er eksempelpriser i DKK.</p><div id="selected" class="selected-list" aria-live="polite"><div class="empty">Du har endnu ikke valgt noget udstyr.</div></div><div class="fieldrow"><div class="field"><label for="start">Startdato</label><input type="date" id="start" required></div><div class="field"><label for="end">Slutdato</label><input type="date" id="end" required></div></div><div class="total"><span>Samlet lejepris <small id="daysLabel"></small></span><strong id="total">0 kr.</strong></div><button class="primary full" id="calculate" type="button">Beregn pris →</button><div class="status" id="status" role="status" aria-live="polite"></div><p class="notice">Datoerne tæller inklusivt. Beløbet er vejledende og uden eventuel levering og opsætning.</p></div>
+    </div>
+  </section>
+  <section class="about" id="om-os"><div class="container about-grid"><div><span class="section-kicker">Om EventRent A/S</span><h2>Professionelle events begynder med godt udstyr</h2><p>EventRent A/S er en fiktiv virksomhed i et Cloud Computing-eksamensprojekt. Hjemmesiden bruges til at demonstrere, hvordan den samme webløsning kan afvikles lokalt i en Ubuntu-VM med Docker og hos en ekstern cloududbyder.</p><p>Fokus i projektet er hosting, netværk, sikkerhed, drift og sammenligning af forskellige driftsmodeller.</p></div><div class="about-panel"><h3>En hjemmeside. To driftsmodeller.</h3><p>Vi demonstrerer samme frontend i to forskellige miljøer, så vi kan sammenligne kontrollen over infrastrukturen, driftansvar og muligheder for skalering.</p><div class="tech-pills"><span>Ubuntu Server</span><span>Docker</span><span>Nginx</span><span>GitHub</span><span>Render</span></div></div></div></section>
+</main>
+<footer><div class="container footer-inner"><div><strong>✦ EventRent A/S</strong><br><small>Fiktiv virksomhed · Cloud Computing eksamensprojekt</small></div><div>EventRent webdemo <strong>v1.0</strong> · <a href="#top">Til toppen ↑</a></div></div></footer>
+<script>
+(() => {
+  'use strict';
+  const catalog = {pa:{name:'PA-højttalersæt',price:499},mic:{name:'Trådløs mikrofon',price:149},led:{name:'LED-lyspakke',price:299},effect:{name:'Effektlyssæt',price:399},tent:{name:'Festtelt 6 × 9 m',price:1299},tables:{name:'Bord- og stolesæt',price:179}};
+  const selected = new Map();
+  const money = n => new Intl.NumberFormat('da-DK',{style:'currency',currency:'DKK',maximumFractionDigits:0}).format(n);
+  const start = document.getElementById('start');
+  const end = document.getElementById('end');
+  const status = document.getElementById('status');
+  const today = new Date();
+  const toISO = date => `${date.getFullYear()}-${String(date.getMonth()+1).padStart(2,'0')}-${String(date.getDate()).padStart(2,'0')}`;
+  start.value = toISO(today); end.value = toISO(today);
+  function dateDays() {
+    if (!start.value || !end.value) return null;
+    const a = Date.parse(start.value+'T12:00:00Z'); const b = Date.parse(end.value+'T12:00:00Z');
+    if (!Number.isFinite(a) || !Number.isFinite(b) || b<a) return null;
+    return Math.round((b-a)/86400000)+1;
+  }
+  function message(text,type) {status.textContent=text;status.className='status show '+type;}
+  function clearMessage(){status.textContent='';status.className='status';}
+  function render() {
+    const list=document.getElementById('selected'); list.replaceChildren();
+    if(!selected.size){let empty=document.createElement('div');empty.className='empty';empty.textContent='Du har endnu ikke valgt noget udstyr.';list.append(empty);}
+    for(const [id,item] of selected){const row=document.createElement('div');row.className='selected-item';const text=document.createElement('span');text.textContent=`${item.name} · ${money(item.price)}/dag`;const button=document.createElement('button');button.type='button';button.setAttribute('aria-label',`Fjern ${item.name}`);button.textContent='×';button.addEventListener('click',()=>{selected.delete(id);render();clearMessage();});row.append(text,button);list.append(row);}
+    const days=dateDays(); const sum=[...selected.values()].reduce((n,item)=>n+item.price,0);
+    document.getElementById('total').textContent=money(days===null?0:sum*days);
+    document.getElementById('daysLabel').textContent=days===null?'':`(${days} ${days===1?'dag':'dage'})`;
+  }
+  document.querySelectorAll('[data-filter]').forEach(button=>button.addEventListener('click',()=>{
+    const value=button.dataset.filter;
+    document.querySelectorAll('[data-filter]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
+    document.querySelectorAll('.product').forEach(card=>card.hidden=value!=='alle'&&card.dataset.category!==value);
+  }));
+  document.querySelectorAll('[data-id]').forEach(button=>button.addEventListener('click',()=>{
+    const id=button.dataset.id;selected.set(id,catalog[id]);render();clearMessage();button.textContent='✓ Tilføjet';window.setTimeout(()=>button.textContent='+ Tilføj',950);
+  }));
+  [start,end].forEach(input=>input.addEventListener('change',()=>{render();clearMessage();}));
+  document.getElementById('calculate').addEventListener('click',()=>{
+    if(!selected.size){message('Vælg mindst ét produkt, før du beregner prisen.','error');return;}
+    if(dateDays()===null){message('Slutdatoen skal være samme dag eller senere end startdatoen.','error');return;}
+    message(`Din pris er beregnet for ${dateDays()} ${dateDays()===1?'dag':'dage'}. Dette er kun en demonstration – ingen reservation er oprettet.`,'success');
+  });
+  render();
+})();
+</script>
+</body>
+</html>
